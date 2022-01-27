@@ -1,0 +1,19 @@
+{
+  "name": "reactmicrofrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wwwroot/dist/app.js",
+  "source": [
+    "./src/index.js"
+  ],
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build",
+    "clean": "del-cli wwwroot/dist/* node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}

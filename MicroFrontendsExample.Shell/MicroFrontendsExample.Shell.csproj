@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.9" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReactMicroFrontend\ReactMicroFrontend.csproj" />
+  </ItemGroup>
+
+	<Target Name="npm restore" BeforeTargets="BeforeBuild">
+		<Exec Command="npm install" />
+	</Target>
+
+	<Target Name="webpack" AfterTargets="Build">
+		<Exec Command="npm run build" />
+	</Target>
+
+	<Target Name="webpack clean" AfterTargets="Clean" Condition="Exists('node_modules')">
+		<Exec Command="npm run clean" />
+	</Target>
+
+</Project>

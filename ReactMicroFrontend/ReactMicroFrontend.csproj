@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="wwwroot\dist\" />
+  </ItemGroup>
+
+	<Target Name="npm restore" BeforeTargets="BeforeBuild">
+		<Exec Command="npm install" />
+	</Target>
+
+	<Target Name="webpack" AfterTargets="Build">
+		<Exec Command="npm run build" />
+	</Target>
+
+	<Target Name="webpack clean" AfterTargets="Clean" Condition="Exists('node_modules')">
+		<Exec Command="npm run clean" />
+	</Target>
+
+</Project>
