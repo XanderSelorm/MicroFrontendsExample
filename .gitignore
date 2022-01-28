@@ -7,7 +7,7 @@
 /ReactMicroFrontend/node_modules
 /ReactMicroFrontend/bin
 /ReactMicroFrontend/obj
-ReactMicroFrontend/.parcel-cache
+ReactMicroFrontend/.parcel-cache/
 /.pnp
 .pnp.js
 
@@ -28,3 +28,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vs
+ReactMicroFrontend/.parcel-cache/ea378ae966456f16.txt
