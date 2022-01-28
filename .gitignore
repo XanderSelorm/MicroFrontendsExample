@@ -7,6 +7,7 @@
 /ReactMicroFrontend/node_modules
 /ReactMicroFrontend/bin
 /ReactMicroFrontend/obj
+/ReactMicroFrontend/.parcel-cache
 /.pnp
 .pnp.js
 
