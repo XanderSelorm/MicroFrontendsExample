@@ -1,7 +1,10 @@
-﻿module.exports = [
+﻿const path = require('path');
+const fs = require("fs");
+
+module.exports = [
     {
         name: "get-react",
-        entry: () => fs.readdirSync("../ReactHello/wwwroot/dist/").filter(f => f.endsWith(".js")).map(f => `../ReactMicroFrontend/wwwroot/dist/react/${f}`),
+        entry: () => fs.readdirSync("../ReactMicroFrontend/wwwroot/dist/").filter(f => f.endsWith(".js")).map(f => `../ReactMicroFrontend/wwwroot/dist/react/${f}`),
         devtool: "source-map",
         mode: "development",
         output: {
