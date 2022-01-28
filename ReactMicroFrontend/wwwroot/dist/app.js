@@ -1,25 +1,19 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+var $ly1wG$reactjsxruntime = require("react/jsx-runtime");
+require("react");
+var $ly1wG$reactdom = require("react-dom");
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ (() => {
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
 
-throw new Error("Module parse failed: Unexpected token (10:24)\nFile was processed with these loaders:\n * ./node_modules/source-map-loader/dist/cjs.js\nYou may need an additional loader to handle the result of these loaders.\n| \n|     if (domElement) {\n>         ReactDOM.render(<h1>Hello, React🌐!</h1>, domElement);\n|     }\n| };");
 
-/***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
-/******/ 	
-/******/ })()
-;
+window.renderApp = ()=>{
+    const domElement = document.getElementById("react-app") || document.querySelector("#react-app");
+    if (domElement) ($parcel$interopDefault($ly1wG$reactdom)).render(/*#__PURE__*/ $ly1wG$reactjsxruntime.jsx("h1", {
+        children: "Hello, React🌐!"
+    }), domElement);
+};
+
+
 //# sourceMappingURL=app.js.map

@@ -4,11 +4,10 @@
   "description": "",
   "main": "wwwroot/dist/app.js",
   "source": [
-    "./src/index.js"
+    "src/index.js"
   ],
   "scripts": {
-    "watch": "parcel watch",
-    "build": "parcel build",
+    "build": "parcel build src/index.js",
     "clean": "del-cli wwwroot/dist/* node_modules"
   },
   "author": "",
